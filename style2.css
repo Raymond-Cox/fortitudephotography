@@ -11,6 +11,9 @@ body {
   font-size: 18px;
 }
 
+.cursive {
+  font: 400 30px/1 'Great Vibes', Helvetica, sans-serif;
+}
 #socialmedia {
     float: right;
 }
@@ -71,11 +74,22 @@ body {
   border: 1px solid black;
 }
 
-#img1 {
-  border-radius: 0%;
+.img-wrap {
+  width: 300px;
+  height: 200px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0;
 }
 
-#galleryrows {
-  width: 800px;
-  height: 600px;
+div > a > img {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-height: 100%;
+  min-width: 100%;
+  transform: translate(-50%, -50%);
 }
+/* LIGHTBOX CSS */
