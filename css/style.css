@@ -97,18 +97,14 @@ margin-top: 2%;
     font-size: 2em;
     font-family: 'Satisfy', cursive;
     padding: 2%;
-    border: 1px solid transparent;
-    border-radius: 5%;
-    transition: color .5s, background .5s, border .5s;
-    -webkit-transition: color .5s, background .5s, border .5s;
+    transition: color .5s;
+    -webkit-transition: color .5s;
 }
 .navmenu li a:hover {
     text-decoration: none;
-    border: 1px solid #696969;
-    background-color: #696969;
-    color: white;
-    transition: color .5s, background .5s, border .5s;
-    -webkit-transition: color .5s, background .5s, border .5s;
+    color: silver;
+    transition: color .5s;
+    -webkit-transition: color .5s;
     
 }
 .brand a:hover {
@@ -119,9 +115,8 @@ margin-top: 2%;
     display: inline;
 }
 .active a {
-    
-    color: white !important;
-    background: #696969;
+    color: silver !important;
+    border-bottom: 3px solid silver !important;
 }
 /* Fancybox CSS */
 .img-wrap {
