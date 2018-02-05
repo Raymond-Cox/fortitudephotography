@@ -1,0 +1,158 @@
+body {
+    font-family: 'Satisfy', cursive;
+}
+.bold {
+    font-weight: bold;
+}
+/* Background slideshow css */
+.cb-slideshow,
+.cb-slideshow:after { 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+    list-style-type: none; 
+}
+
+.cb-slideshow li span { 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 18s linear infinite 0s; 
+}
+.cb-slideshow li:nth-child(1) span { 
+    background-image: url(../images/16-min.jpg) 
+}
+.cb-slideshow li:nth-child(2) span { 
+    background-image: url(../images/13-min.jpg);
+    animation-delay: 6s; 
+}
+.cb-slideshow li:nth-child(3) span { 
+    background-image: url(../images/5-min.jpg);
+    animation-delay: 12s;
+}
+@keyframes imageAnimation { 
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    16% { opacity: 1; animation-timing-function: ease-out; }
+    33% { opacity: 1 }
+    50% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+.no-cssanimations .cb-slideshow li span{
+	opacity: 1;
+}
+
+/* Navbar CSS FRONT PAGE */
+.navmenufp {
+margin-top: 2%;
+}
+.navmenufp ul {
+    list-style-type: none;
+    z-index: 1000;
+    opacity: 1;
+    padding-left: 0;
+}
+.navmenufp li {
+    display: inline;
+}
+.navmenufp li a {
+    color: white;
+    font-size: 2.5vmin;
+    padding: 1%;
+    transition: color .5s;
+    -webkit-transition: color .5s;
+}
+.navmenufp li a:hover {
+    text-decoration: none;
+    color: rgba(255, 255, 255, .9);
+    transition: color .5s;
+    -webkit-transition: color .5s;
+}
+
+/* Navbar CSS other pages */
+
+.navmenu {
+    margin-top: 2%;
+}
+.navmenu .row {
+    padding-bottom: 1.5%;
+    border-bottom: 1px solid silver;
+}
+.navmenu ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.navmenu li {
+    display: inline;
+}
+.navmenu a {
+    color: black;
+    font-size: 2.5vmin;
+    font-family: 'Satisfy', cursive;
+    padding: 2%;
+}
+.navmenu li a {
+    color: rgba(130, 130, 130, 1);
+    font-size: 2.5vmin;
+    font-family: 'Satisfy', cursive;
+    padding: 1%;
+    transition: color .2s, background-color .2s;
+    -webkit-transition: color .2s, background-color .2s;
+}
+.navmenu li a:hover {
+    text-decoration: none;
+    background-color: rgba(130, 130, 130, 1);
+    color: white;
+    transition: color .2s, background-color .2s;
+    -webkit-transition: color .2s, background-color .2s;
+    
+}
+.brand a:hover {
+    text-decoration: none;
+}
+.brand {
+    text-align: right;
+}
+.brandimg {
+    height: 40px;
+    display: inline;
+}
+.active a {
+    color: black !important;
+    font-weight: bold;
+}
+.active a:hover {
+    color: white !important;
+}
+/* Fancybox CSS */
+.img-wrap {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0;
+  }
+  
+  .img-wrap img {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: auto;
+    min-width: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
+  }
