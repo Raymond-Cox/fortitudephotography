@@ -35,8 +35,60 @@
 </div>
 
 <!-- Image Area -->
-<div class="container-fluid">
-    <p class="imglist">
+<div class="container-fluid content">
+    <div class="row">
+        <div class="col-2 sidenav grey tab">
+            <button class="tablinks" onmouseover="preview(event, 'males')" onmouseout="hide(event, 'males')" onclick="openTab(event, 'males')">Male Portraits</button>
+            <button class="tablinks" onmouseover="preview(event, 'females')" onmouseout="hide(event, 'females')" onclick="openTab(event, 'females')">Female Portraits</button>
+            <button class="tablinks" onmouseover="preview(event, 'children')" onmouseout="hide(event, 'children')" onclick="openTab(event, 'children')">Children</button>
+            <button class="tablinks" onmouseover="preview(event, 'publications')" onmouseout="hide(event, 'publications')" onclick="openTab(event, 'publications')">Publications</button>
+            <button class="tablinks" onmouseover="preview(event, 'fashion')" onmouseout="hide(event, 'fashion')" onclick="openTab(event, 'fashion')">Fashion Shows</button>
+        </div>
+    </div>
+
+    <div class="row tabcontent hidden" id="males">
+        <div class="col-10 offset-2">
+            <p class="imglist">
+                <div class="img-wrap males35">
+                    <a href="smallimages/18-smallfinal.jpg" data-fancybox="males">
+                    <img src="thumbnails/18-small.jpg" class="img-responsive" />
+                    </a>
+                </div>
+                <div class="img-wrap males35">
+                    <a href="smallimages/19-smallfinal.jpg" data-fancybox="males">
+                    <img src="thumbnails/19-small.jpg" class="img-responsive" />
+                    </a>
+                </div>
+                <div class="img-wrap males40">
+                    <a href="smallimages/20-smallfinal.jpg" data-fancybox="males">
+                    <img src="thumbnails/20-small.jpg" class="img-responsive" />
+                    </a>
+                </div>
+                <div class="img-wrap males40">
+                    <a href="smallimages/21-smallfinal.jpg" data-fancybox="males">
+                    <img src="thumbnails/21-small.jpg" class="img-responsive" />
+                    </a>
+                </div>
+                <div class="img-wrap males40">
+                    <a href="smallimages/22-smallfinal.jpg" data-fancybox="males">
+                    <img src="thumbnails/22-small.jpg" class="img-responsive" />
+                    </a>
+                </div>
+            </p>
+        </div>
+    </div>
+    <div class="row tabcontent" id="females">
+        <div class="col-10 offset-2">
+            <p class="imglist">
+                <div class="img-wrap">
+                    
+                </div>
+            </p>
+        </div>
+
+    </div>
+    </div>
+    <!--<p class="imglist">
         <div class="img-wrap">
 	        <a href="smallimages/1-smallfinal.jpg" data-fancybox="images">
 	        <img src="thumbnails/1-small.jpg" class="img-responsive"></img>
@@ -112,7 +164,7 @@
             <img src="thumbnails/13-small.jpg" class="img-responsive"></img>
             </a>
         </div>
-    </p>
+    </p> -->
 </div>
 
 <!-- JS -->
@@ -122,7 +174,7 @@
 
 <script type="text/javascript">
 $().fancybox({
-selector : '[data-fancybox="images"]',
+selector : '[data-fancybox]',
 protect : true,
 thumbs : {
 autoStart : true
@@ -136,6 +188,40 @@ buttons : [
 'close'
 ]
 });
+</script>
+
+<script> 
+
+function openTab(evt, tabName) {
+    var i, tabcontent, currenttab, tablinks;
+            
+    /*Hides all elements with class="tabcontent" */
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+    }
+            
+    /*Get all elements with class="tablinks" and remove the class "active"*/
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i=0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+            
+    /*Show the current tab, and add an "active" class to the button that opened the tab*/
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+    currenttab = document.getElementById(tabName);
+}
+
+function preview(evt, tabName) {
+document.getElementById(tabName).classList.add("preview");
+}
+              
+function hide(evt, tabName) {
+document.getElementById(tabName).classList.remove("preview");
+}
+
+
 </script>
 <!-- Bootstrap JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>

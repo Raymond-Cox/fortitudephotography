@@ -83,11 +83,17 @@ margin-top: 2%;
 /* Navbar CSS other pages */
 
 .navmenu {
-    margin-top: 2%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    background-color: white;
 }
 .navmenu .row {
     padding-bottom: 1.5%;
     border-bottom: 1px solid silver;
+    padding-top: 2%;
 }
 .navmenu ul {
     list-style-type: none;
@@ -135,24 +141,81 @@ margin-top: 2%;
 .active a:hover {
     color: white !important;
 }
+.active {
+    color: rgba(130, 130, 130, 1) !important;
+}
 /* Fancybox CSS */
 .img-wrap {
-    width: 300px;
-    height: 200px;
+    width: 450px;
+    height: 500px;
     position: relative;
     display: inline-block;
     overflow: hidden;
     margin: 0;
   }
-  
-  .img-wrap img {
+ 
+.males40 img {
     display: block;
     position: absolute;
     top: 50%;
     left: 50%;
-    height: auto;
+    min-height: auto;
     min-width: 50%;
     -webkit-transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -40%);
+  }
+  .males35 img {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-height: auto;
+    min-width: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%, -35%);
+  }
+
+  /*Broad classes */
+  .content {
+      margin-top: 6.5%;
+      z-index: 0;
+  }
+  .hidden {
+      display: none;
+  }
+  .sidenav {
+      position: fixed;
+      height: 100%;
+      border-top-right-radius: 25px;
+      padding-top: 5%;
+  }
+  .grey {
+      background-color: black;
+      color: white;
+  }
+  .tablinks {
+      background-color: inherit;
+      color: white;
+      border: none;
+      display: block;
+      font-size: 2.5vmin;
+      margin-top: 3%;
+      -webkit-transition: color .2s;
+      transition: color .2s;
+  }
+  .preview {
+      z-index: 10;
+      background-color: white;
+      display: block;
+  }
+  .tablinks:hover {
+      cursor: pointer;
+      color: rgba(130, 130, 130, 1) !important;
+      -webkit-transition: color .2s;
+      transition: color .2s;
+  }
+  .tablinks:focus {
+      outline: none;
   }
